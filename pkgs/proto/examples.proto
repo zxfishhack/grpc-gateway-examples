@@ -1,0 +1,13 @@
+syntax = "proto3";
+package grpc_gateway_examples;
+option go_package = "github.com/zxfishhack/grpc-gateway-examples/pkgs/proto";
+import "google/protobuf/empty.proto";
+import "google/api/httpbody.proto";
+
+service WithAuthentication {
+    rpc Foo(google.protobuf.Empty) returns (google.api.HttpBody);
+}
+
+service WithoutAuthentication {
+    rpc MixedTest(google.protobuf.Empty) returns (stream google.api.HttpBody);
+}

@@ -1,0 +1,8 @@
+type: google.api.service
+config_version: 3
+http:
+  rules:
+    - selector: grpc_gateway_examples.WithAuthentication.Foo
+      get: /foo
+    - selector: grpc_gateway_examples.WithoutAuthentication.MixedTest
+      get: /mixed
